@@ -10,3 +10,4 @@ bcrypt==4.3.0
 python-multipart==0.0.9
 python-slugify==8.0.4
 dnspython==2.6.1
+certifi
