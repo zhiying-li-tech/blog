@@ -5,11 +5,9 @@ services:
     ports:
       - "8000:8000"
     environment:
-      - MONGO_URI=mongodb://mongo:27017
+      - MONGO_URI=mongodb+srv://zhiyingli73:1qaz2wsx.@cluster0.ejzo8e3.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
       - DB_NAME=blog
       - JWT_SECRET=change-this-to-a-real-secret-key
-    # depends_on:
-    #   - mongo
     restart: unless-stopped
 
   frontend:
