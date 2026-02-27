@@ -1,0 +1,51 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  height: $header-height;
+  background: $bg-white;
+  box-shadow: $shadow-sm;
+  @include flex-between;
+  padding: 0 24px;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: 700;
+  color: $primary-color;
+  cursor: pointer;
+  flex-shrink: 0;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.search {
+  width: 300px;
+
+  @include respond-to(md) {
+    width: 200px;
+  }
+
+  @include respond-to(sm) {
+    display: none;
+  }
+}
+
+.actions {
+  @include flex-center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.userDropdown {
+  cursor: pointer;
+  @include flex-center;
+  gap: 8px;
+}

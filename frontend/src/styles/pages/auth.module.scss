@@ -1,0 +1,32 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+
+.container {
+  @include flex-center;
+  min-height: calc(100vh - 64px - 120px);
+  padding: 24px;
+}
+
+.card {
+  width: 100%;
+  max-width: 420px;
+  background: $bg-white;
+  border-radius: $border-radius;
+  box-shadow: $shadow-md;
+  padding: 40px 32px;
+}
+
+.title {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 600;
+  color: $text-color;
+  margin-bottom: 32px;
+}
+
+.footer {
+  text-align: center;
+  margin-top: 16px;
+  color: $text-secondary;
+  font-size: 14px;
+}

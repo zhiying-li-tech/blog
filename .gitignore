@@ -1,0 +1,19 @@
+# node
+node_modules
+.next
+dist
+
+# python
+venv
+__pycache__
+*.pyc
+
+# env
+.env
+.env.production
+
+# docker
+*.log
+
+# system
+.DS_Store

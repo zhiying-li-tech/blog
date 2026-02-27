@@ -1,0 +1,37 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 32px 24px;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 24px;
+  color: $text-color;
+}
+
+.form {
+  background: $bg-white;
+  border-radius: $border-radius;
+  padding: 24px;
+  box-shadow: $shadow-sm;
+}
+
+.editorWrap {
+  margin-bottom: 24px;
+
+  :global(.w-md-editor) {
+    min-height: 400px;
+  }
+}
+
+.footer {
+  @include flex-center;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 24px;
+}

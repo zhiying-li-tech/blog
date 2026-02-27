@@ -1,0 +1,11 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+
+.footer {
+  height: 120px;
+  background: $bg-white;
+  border-top: 1px solid $border-color;
+  @include flex-center;
+  color: $text-light;
+  font-size: 14px;
+}

@@ -1,0 +1,160 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 32px 24px;
+}
+
+.header {
+  margin-bottom: 32px;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: 700;
+  color: $text-color;
+  line-height: 1.4;
+  margin-bottom: 16px;
+}
+
+.meta {
+  @include flex-center;
+  justify-content: flex-start;
+  gap: 16px;
+  color: $text-light;
+  font-size: 14px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+
+.authorInfo {
+  @include flex-center;
+  gap: 8px;
+}
+
+.category {
+  cursor: pointer;
+}
+
+.tags {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+
+.content {
+  line-height: 1.8;
+  font-size: 16px;
+  color: $text-color;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-top: 24px;
+    margin-bottom: 12px;
+    font-weight: 600;
+    color: $text-color;
+  }
+
+  h1 { font-size: 28px; }
+  h2 { font-size: 24px; }
+  h3 { font-size: 20px; }
+  h4 { font-size: 18px; }
+
+  p {
+    margin-bottom: 16px;
+  }
+
+  img {
+    max-width: 100%;
+    border-radius: $border-radius;
+    margin: 16px 0;
+  }
+
+  pre {
+    background: #f6f8fa;
+    border-radius: $border-radius;
+    padding: 16px;
+    overflow-x: auto;
+    margin-bottom: 16px;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  code {
+    font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+  }
+
+  :not(pre) > code {
+    background: #f0f0f0;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 0.9em;
+  }
+
+  blockquote {
+    border-left: 4px solid $primary-color;
+    padding: 8px 16px;
+    margin: 16px 0;
+    background: rgba($primary-color, 0.04);
+    color: $text-secondary;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 16px;
+
+    th,
+    td {
+      border: 1px solid $border-color;
+      padding: 8px 12px;
+      text-align: left;
+    }
+
+    th {
+      background: #f6f8fa;
+      font-weight: 600;
+    }
+  }
+
+  ul,
+  ol {
+    padding-left: 24px;
+    margin-bottom: 16px;
+  }
+
+  li {
+    margin-bottom: 4px;
+  }
+
+  a {
+    color: $primary-color;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  hr {
+    border: none;
+    border-top: 1px solid $border-color;
+    margin: 24px 0;
+  }
+}
+
+.actions {
+  margin-top: 40px;
+  padding-top: 24px;
+  border-top: 1px solid $border-color;
+  @include flex-center;
+  justify-content: flex-end;
+  gap: 12px;
+}

@@ -1,0 +1,67 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+
+.cardLink {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  height: 100%;
+}
+
+.card {
+  @include card-style;
+  cursor: pointer;
+  overflow: hidden;
+  height: 100%;
+
+  :global(.ant-card-body) {
+    padding: 16px;
+  }
+}
+
+.cover {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: 600;
+  color: $text-color;
+  margin-bottom: 8px;
+  @include text-ellipsis(2);
+}
+
+.summary {
+  font-size: 14px;
+  color: $text-secondary;
+  margin-bottom: 12px;
+  line-height: 1.6;
+  @include text-ellipsis(3);
+}
+
+.meta {
+  @include flex-between;
+  font-size: 12px;
+  color: $text-light;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.author {
+  @include flex-center;
+  gap: 6px;
+}
+
+.stats {
+  @include flex-center;
+  gap: 12px;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-bottom: 8px;
+}
